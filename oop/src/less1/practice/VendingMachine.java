@@ -19,8 +19,6 @@ public abstract class VendingMachine {
 
     public Product getProduct(String name) {
 
-//        products.stream().filter(product -> product.getName().equals(name)).findFirst().orElse(null);
-
         for (Product product : products) {
             if (product.getName().equals(name)) {
                 products.remove(product);
@@ -32,21 +30,8 @@ public abstract class VendingMachine {
         return null;
     }
 
-
-
-//    public Product getProduct(String name) {
-//
-//        for (Product product : products) {
-//            if (product.getName().equals(name)) {
-//                products.remove(product);
-//                return product;
-//            }
-//        }
-//
-//        throw new RuntimeException("No such product: " + name);
-//    }
-
     public List<Product> getProducts() {
         return products;
     }
+
 }

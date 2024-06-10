@@ -11,11 +11,12 @@ public class WaterVendingMachine extends VendingMachine {
     }
 
     public WaterVendingMachine(List<Product> products) {
-        super(products);
+        addProducts(products);
     }
 
     @Override
     public void addProducts(List<Product> products) {
-        this.products.addAll(products);
+        getProducts().addAll(products);
     }
+
 }
