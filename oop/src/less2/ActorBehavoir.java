@@ -1,6 +1,5 @@
-/**
- * ActorBehavoir
- */
+package less2;
+
 public interface ActorBehavoir {
 
     void setMakeOrder(boolean fag);

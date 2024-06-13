@@ -1,15 +1,15 @@
+package less2;
+
 import java.util.List;
 
 public interface QueueBehaviour {
 
-    void takeInQueue(Human actor);//войти в очередь
+    void takeInQueue(Human actor);
 
-    void takeOrders();// сделать заказ
+    void takeOrders();
 
-    void giveOrders(Human actor, List<EProduct> products);// забрать заказы
+    void giveOrders(Human actor, List<EProduct> products);
 
-    void releaseFromQueue(Human actor);// выйти из очереди
-    
-
+    void releaseFromQueue(Human actor);
     
 }

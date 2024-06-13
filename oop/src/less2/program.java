@@ -1,39 +1,41 @@
+package less2;
+
 import java.util.List;
 
 public class program {
 
     public static void main(String[] args) {
 
-        Human ivan = new Human("Иван Степанович");
-        Human valia = new Human("Валюха");
-        Human oly = new Human("Ольга Николаевна");
-        Human yra = new Human("Юрий Анатольевич");
-        Human mityi = new Human("Митяй");
-        Human geny = new Human("Женя");
-        Human canych = new Human("Беркович");
+        Human customer1 = new Human("покупатель 1");
+        Human customer2 = new Human("покупатель 2");
+        Human customer3 = new Human("покупатель 3");
+        Human customer4 = new Human("покупатель 4");
+        Human customer5 = new Human("покупатель 5");
+        Human customer6 = new Human("покупатель 6");
+        Human customer7 = new Human("покупатель 7");
 
-        Market borisZhuks = new Market();
+        Market market = new Market();
 
-        borisZhuks.acceptToMarket(List.of(ivan, valia, oly, yra, geny, mityi));
+        market.acceptToMarket(List.of(customer1, customer2, customer3, customer4, customer6, customer5));
 
-        borisZhuks.giveOrders(ivan, List.of(EProduct.SUGAR, EProduct.JUICE, EProduct.VODKA));
-        borisZhuks.giveOrders(valia, List.of(EProduct.APPLE, EProduct.FILE, EProduct.POTATO, EProduct.MEAT));
-        borisZhuks.giveOrder(oly, EProduct.APPLE);
-        borisZhuks.giveOrder(yra, EProduct.APPLE);
+        market.giveOrders(customer1, List.of(EProduct.SUGAR, EProduct.JUICE, EProduct.VODKA));
+        market.giveOrders(customer2, List.of(EProduct.APPLE, EProduct.FILE, EProduct.POTATO, EProduct.MEAT));
+        market.giveOrder(customer3, EProduct.APPLE);
+        market.giveOrder(customer4, EProduct.APPLE);
 
-        borisZhuks.update();
+        market.update();
 
-        borisZhuks.releaseFromMarket(valia);
-        borisZhuks.releaseFromMarket(oly);
+        market.releaseFromMarket(customer2);
+        market.releaseFromMarket(customer3);
 
-        borisZhuks.acceptToMarket(canych);
-        borisZhuks.giveOrder(canych, EProduct.VODKA);
+        market.acceptToMarket(customer7);
+        market.giveOrder(customer7, EProduct.VODKA);
 
-        borisZhuks.update();
+        market.update();
 
-        borisZhuks.releaseFromMarket();
+        market.releaseFromMarket();
 
-        borisZhuks.update();
+        market.update();
         
     }
 }

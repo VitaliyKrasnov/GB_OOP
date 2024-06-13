@@ -1,9 +1,11 @@
+package less2;
+
 public interface MarketBehaviour {
 
-    void acceptToMarket(Human actor);//входит в магазин
+    void acceptToMarket(Human actor);
 
-    void releaseFromMarket(Human actor);//выходит из магазина
+    void releaseFromMarket(Human actor);
 
-    void update();//обновление состояния магазина
+    void update();
 
 }

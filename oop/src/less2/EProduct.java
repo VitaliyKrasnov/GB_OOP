@@ -1,3 +1,5 @@
+package less2;
+
 public enum EProduct {
     
     APPLE ("Яблоко"),

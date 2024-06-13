@@ -1,3 +1,5 @@
+package less2;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,13 +22,13 @@ public class Human extends Actor {
     }
 
     @Override
-    public void setMakeOrder(boolean fag) {//флаг сделан ли заказ
-        this.isMakeOrder = fag;
+    public void setMakeOrder(boolean flag) {
+        this.isMakeOrder = flag;
     }
 
     @Override
-    public void setTakeOrder(boolean fag) {//флаг получен ли заказ
-        this.isTakeOrder = fag;
+    public void setTakeOrder(boolean flag) {
+        this.isTakeOrder = flag;
     }
 
     @Override
