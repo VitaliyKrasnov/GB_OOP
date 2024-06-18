@@ -75,7 +75,7 @@ public class Program {
 
         streamService.printListOfStreams();
 
-        List<Stream> sortedStream = streamService.getSortedStreams();
+        List<Stream> sortedStream = streamService.getSortedStreams(null);
         System.out.println("Отсортированный список потоков:");
         System.out.println(sortedStream);
     }

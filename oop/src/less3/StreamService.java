@@ -2,11 +2,11 @@ package less3;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import less3.group.Group;
 import less3.stream.Stream;
-import less3.stream.StreamComparator;
 
 public class StreamService {
 
@@ -39,10 +39,15 @@ public class StreamService {
         }
     }
 
-    public List<Stream> getSortedStreams() {
+    public List<Stream> getSortedStreams(Comparator<Stream> comparator) {
         List<Stream> tmp = new ArrayList<>(streams.size());
         tmp.addAll(streams);
-        Collections.sort(tmp, new StreamComparator());
+        if (comparator != null) {
+            Collections.sort(tmp, comparator);
+        } else {
+            Collections.sort(tmp, (stream1, stream2) -> stream1.getNumberOfGroups() - stream2.getNumberOfGroups());
+        }
+        
         return tmp;
     }
 

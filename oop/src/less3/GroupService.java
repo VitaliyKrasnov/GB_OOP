@@ -9,7 +9,6 @@ import java.util.Map;
 
 import less3.group.Group;
 import less3.student.Student;
-import less3.student.StudentComparator;
 
 public class GroupService {
     Map<String, Group> groups = new HashMap<>();
@@ -38,7 +37,7 @@ public class GroupService {
         if (comparator != null) {
             Collections.sort(students, comparator);
         } else {
-            Collections.sort(students, new StudentComparator());
+            Collections.sort(students, (student1, student2) -> student1.id - student2.id);
         }
         return students;
     }
