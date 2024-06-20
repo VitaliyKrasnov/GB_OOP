@@ -18,7 +18,7 @@ public class GroupService {
         System.out.printf("Список студентов группы '%s':\n", groupName);
         for (Student student : students) {
             group.addStudent(student);
-            System.out.println("Имя: " + student.getName() + ", id: " + student.getId());
+            System.out.println("Имя: " + student.getFullName() + ", id: " + student.getId());
         }
         groups.put(groupName, group);
     }
