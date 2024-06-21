@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Group implements Iterable<Student> {
+public class StudentGroup implements Iterable<Student> {
 
     private final String name;
     private List<Student> students = new ArrayList<>();
 
-    public Group(String name) {
+    public StudentGroup(String name) {
         this.name = name;
     }
 
-    public void addStudent(Student student) {
-        students.add(student);
+    public void addStudent(Student user) {
+        students.add(user);
     }
 
     public String getGroupName() {

@@ -6,7 +6,7 @@ import java.util.Locale;
 
 import less4.model.User;
 
-public class UserComparator<T extends User> implements Comparator<T> {
+public class UserFullNameComparator<T extends User> implements Comparator<T> {
 
     private final Collator collator = Collator.getInstance(new Locale("ru"));
 

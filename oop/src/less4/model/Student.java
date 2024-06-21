@@ -9,4 +9,9 @@ public class Student extends User {
         super(name, surname);
     }
 
+    @Override
+    public boolean isTeacher() {
+        return false;
+    }
+
 }

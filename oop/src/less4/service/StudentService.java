@@ -2,11 +2,11 @@ package less4.service;
 
 import less4.model.Student;
 
-public class StudentService {
+public class StudentService implements UserService<Student> {
 
-    public Student creatStudent(String name, String surname) {
+    @Override
+    public Student createUser(String name, String surname) {
         return new Student (name, surname);
     }
-
 
 }

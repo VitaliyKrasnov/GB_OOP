@@ -6,6 +6,6 @@ import less4.model.User;
 
 public interface UserView<T extends User> {
 
-    void sendOnConsole(List<T> students);
+    void sendOnConsole(List<T> users);
 
 }

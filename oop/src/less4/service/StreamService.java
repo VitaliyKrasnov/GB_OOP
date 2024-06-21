@@ -5,16 +5,16 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import less4.model.Group;
+import less4.model.StudentGroup;
 import less4.model.Stream;
 
 public class StreamService {
 
     private List<Stream> streams = new ArrayList<>();
 
-    public void addStream(String stremaName, Group... groups) {
+    public void addStream(String stremaName, StudentGroup... groups) {
         Stream stream = new Stream(stremaName);
-        for (Group group : groups) {
+        for (StudentGroup group : groups) {
             stream.addGroup(group); 
         }
         streams.add(stream);

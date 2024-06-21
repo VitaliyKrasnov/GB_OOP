@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Stream implements Iterable<Group> {
+public class Stream implements Iterable<StudentGroup> {
 
     private final String name;
-    private List<Group> stream = new ArrayList<>();
+    private List<StudentGroup> stream = new ArrayList<>();
 
     public Stream(String name) {
         this.name = name;
     }
 
-    public void addGroup(Group group) {
+    public void addGroup(StudentGroup group) {
         stream.add(group);
         System.out.printf("В поток '%s' добавлена группа студентов '%s'\n", name, group.getGroupName());
     }
@@ -32,7 +32,7 @@ public class Stream implements Iterable<Group> {
     }
 
     @Override
-    public Iterator<Group> iterator() {
+    public Iterator<StudentGroup> iterator() {
        return stream.iterator();
     }
     

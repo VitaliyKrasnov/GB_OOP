@@ -3,7 +3,7 @@ package less4.controller;
 import java.util.Comparator;
 import java.util.List;
 
-import less4.model.Group;
+import less4.model.StudentGroup;
 import less4.model.Stream;
 import less4.service.StreamService;
 
@@ -11,7 +11,7 @@ public class StreamController {
 
     private StreamService streamService = new StreamService();
 
-    public void addStream(String stremaName, Group... groups) {
+    public void addStream(String stremaName, StudentGroup... groups) {
         streamService.addStream(stremaName, groups);
     }
 

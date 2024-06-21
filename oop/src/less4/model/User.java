@@ -27,6 +27,8 @@ public abstract class User implements Comparable<User> {
         return id;
     }
 
+    public abstract boolean isTeacher();
+
     @Override
     public String toString() {
         return name + " " + surname + ", id: " + id;

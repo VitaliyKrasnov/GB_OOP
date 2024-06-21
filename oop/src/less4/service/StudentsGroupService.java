@@ -7,28 +7,29 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import less4.model.Group;
+import less4.model.StudentGroup;
 import less4.model.Student;
 
-public class GroupService {
-    Map<String, Group> groups = new HashMap<>();
+public class StudentsGroupService {
+    Map<String, StudentGroup> groups = new HashMap<>();
 
-    public void createStudentGroup(String groupName, Student... students) {
-        Group group = new Group(groupName);
-        System.out.printf("Список студентов группы '%s':\n", groupName);
+    public void createGroup(String groupName, Student... students) {
+        StudentGroup group = new StudentGroup(groupName);
+        System.out.printf("Список группы '%s':\n", groupName);
         for (Student student : students) {
             group.addStudent(student);
-            System.out.println("Имя: " + student.getFullName() + ", id: " + student.getId());
+            System.out.println("Имя: " + student.getFullName() 
+            + ", id: " + student.getId());
         }
         groups.put(groupName, group);
     }
 
-    public Group getGroup(String groupName) {
+    public StudentGroup getGroup(String groupName) {
         return groups.get(groupName);
     }
 
-    public List<Student> getSortedStudents(String groupName, Comparator<Student> comparator) {
-        Group group = groups.get(groupName);
+    public List<Student> getSortedGroup(String groupName, Comparator<Student> comparator) {
+        StudentGroup group = groups.get(groupName);
         List<Student> students = new ArrayList<>();
         for (Student student : group) {
             students.add(student);
