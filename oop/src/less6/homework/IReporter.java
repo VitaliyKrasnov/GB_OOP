@@ -1,7 +1,7 @@
 package less6.homework;
 
-public interface IReporter<U extends User> {
+public interface IReporter<U extends IUser> {
 
-    public void report(User user);
+    public void report(U user);
 
 }

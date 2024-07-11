@@ -7,7 +7,7 @@ package less6.homework;
  * Так же в соовт. с принципом I разделили интерфейсы сохранения пользователя в БД
  * и получение отчёта
  */
-public class UserPersister implements IPersister<User> {
+public class Persister implements IPersister<IUser> {
 
     /**
      * сохраняем объект у которого реализован метод getName
@@ -15,7 +15,7 @@ public class UserPersister implements IPersister<User> {
      * @param user
      */
     @Override
-    public void save(User user) {
+    public void save(IUser user) {
         System.out.println("Save user: " + user.getName());
     }
 

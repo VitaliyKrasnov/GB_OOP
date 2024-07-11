@@ -6,13 +6,14 @@ package less6.homework;
  * т.е. можем добавлять новые поля перегружая конструктор при этом метод getName
  * не изменяется
  */
-public class User {
+public class User implements IUser{
     private final String name;
 
     public User(String name){
         this.name = name;
     }
 
+    @Override
     public String getName(){
         return name;
     }

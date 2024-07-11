@@ -6,11 +6,11 @@ public class Main {
      * и сохранения в БД
      */
 
-    static IPersister<User> userPersister = new UserPersister();
-    static IReporter<User> userReporter = new UserReporter();
+    static IPersister<IUser> persister = new Persister();
+    static IReporter<IUser> reporter = new Reporter();
     public static void main(String[] args){
-        User user = new User("Bob");
-        userReporter.report(user);
-        userPersister.save(user);
+        IUser user = new User("Bob");
+        reporter.report(user);
+        persister.save(user);
     }
 }
