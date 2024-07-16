@@ -1,15 +1,14 @@
 package less7.service;
 
 import less7.model.Complex;
-import less7.model.ComplexImpl;
 
 public class ComplexAddition implements Operation<Complex> {
 
+    private final ComplexCalc complexCalc = new ComplexCalc();
+
     @Override
     public Complex eval(Complex op1, Complex op2) {
-        double realResult = op1.getReal() + op2.getReal();
-        double imgResult = op1.getImg() + op2.getImg();
-        return new ComplexImpl(realResult, imgResult);
+        return complexCalc.addOperation(op1, op2);
     }
 
     
