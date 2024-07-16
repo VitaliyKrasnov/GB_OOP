@@ -17,4 +17,9 @@ public class ComplexCalcOperationsConfigurator {
         return complexCalcOperationsConfig;
     }
 
+    public static String getListOfAvailableOperations() {
+        return  "'+' - сложение комплексных чисел\n" +
+                "'-' - вычитание комлексных чисел\n";
+    }
+
 }

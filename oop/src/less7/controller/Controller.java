@@ -18,10 +18,9 @@ public class Controller {
     private final UserEnter<String> enterOperation = new EnterString();
 
     public void run() throws EndProgramException {
-        String operation = enterOperation.enter("Введите операцию:\n" + 
-        "'+' - сложение комплексных чисел\n" +
-        "'-' - вычитание комлексных чисел\n" + 
-        "Для выхода из калькулятора введите 'q'");
+        String operation = enterOperation.enter("Введите операцию:\n"
+        + ComplexCalcOperationsConfigurator.getListOfAvailableOperations()
+        + "Для выхода из калькулятора введите 'q'");
         if ("q".equals(operation)) {
             throw new EndProgramException();
         } else if (complexCalcOperationsConfig.get(operation) == null) {
